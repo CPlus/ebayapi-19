@@ -2,6 +2,7 @@ require 'net/https'
 require 'date'
 require 'time'
 require 'uri'
+require 'logger'
 
 module Ebay #:nodoc:
   class ConnectionError < StandardError #:nodoc:
@@ -54,8 +55,6 @@ module Ebay #:nodoc:
         logger.debug(headers)
         logger.debug("Request Body:")
         logger.debug(body)
-        logger.debug("Request Headers:")
-        logger.debug(headers)
       end
 
       begin

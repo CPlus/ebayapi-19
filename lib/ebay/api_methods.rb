@@ -767,6 +767,7 @@ module Ebay
     #
     # Official Documentation for GetSessionID[http://developer.ebay.com/DevZone/XML/docs/Reference/eBay/io_GetSessionID.html]
     def get_session_id(params = {})
+      params[:ru_name]= Ebay::Api.ru_name
       commit(Ebay::Requests::GetSessionID, params)
     end
     # Builds Ebay::Requests#GetShippingDiscountProfiles
