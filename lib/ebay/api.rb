@@ -151,9 +151,6 @@ module Ebay #:nodoc:
         params[:auth_token] = auth_token
       end
 
-      puts "Service Key was: #{@service_key}"
-      puts "Params were: #{params.inspect}"
-      puts "Format was: #{format}"
       request = request_class.new(params)
       yield request if block_given?
       invoke(request, format)
