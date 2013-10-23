@@ -2,7 +2,6 @@ require 'net/https'
 require 'date'
 require 'time'
 require 'uri'
-require 'logger'
 
 module Ebay #:nodoc:
   class ConnectionError < StandardError #:nodoc:
